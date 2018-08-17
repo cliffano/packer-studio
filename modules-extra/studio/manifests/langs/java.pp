@@ -12,21 +12,6 @@ class studio::langs::java (
     version => $maven_version,
   }
 
-  package { 'unzip':
-    ensure   => latest,
-    provider => apt,
-  }
-
-  package { 'zip':
-    ensure   => latest,
-    provider => apt,
-  }
-
-  package { 'curl':
-    ensure   => latest,
-    provider => apt,
-  }
-
   include sdkman
 
 }

@@ -9,6 +9,7 @@ exec { 'apt-get update':
   ],
 }
 
+include studio::langs::utils
 include studio::langs::go
 include studio::langs::java
 include studio::langs::javascript

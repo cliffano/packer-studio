@@ -22,6 +22,8 @@ class studio::langs::utils (
     ensure  => directory,
     recurse => true,
     mode    => '0777',
+    owner   => 'studio',
+    group   => 'staff',
   }
 
 }

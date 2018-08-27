@@ -14,6 +14,7 @@ class studio::langs::utils (
     uid    => '8888',
     gid    => '8888',
     group  => 'staff',
+    home   => '/home/studio',
     shell  => '/bin/bash',
     locked => false,
   }

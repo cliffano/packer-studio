@@ -1,6 +1,8 @@
 forge 'https://forgeapi.puppetlabs.com'
 
 mod 'aco-oracle_java', '2.8.3'
+mod 'golja/gnupg', '1.2.3'
+mod 'inkblot-hashicorp', '1.4.1'
 mod 'maestrodev-maven', '1.4.0'
 mod 'maestrodev-wget', '1.7.3'
 mod 'paulosuzart-sdkman', '1.0.2'

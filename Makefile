@@ -15,9 +15,16 @@ lint:
 	shellcheck \
 		provisioners/*.sh
 
+aws-studio:
+	mkdir -p logs/
+	PACKER_LOG_PATH=logs/packer-aws-studio.log \
+		PACKER_LOG=1 \
+		packer build \
+		templates/aws-studio.json
+
 docker-studio:
 	mkdir -p logs/
-	PACKER_LOG_PATH=logs/packer-studio.log \
+	PACKER_LOG_PATH=logs/packer-docker-studio.log \
 		PACKER_LOG=1 \
 		packer build \
 		templates/docker-studio.json

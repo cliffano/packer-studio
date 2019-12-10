@@ -15,3 +15,4 @@ include studio::langs::java
 include studio::langs::javascript
 include studio::langs::python
 include studio::langs::ruby
+include studio::langs::rust

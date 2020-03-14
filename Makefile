@@ -29,10 +29,10 @@ docker-studio:
 		packer build \
 		templates/docker-studio.json
 
-docker-publish-studio:
+publish-docker-studio:
 	docker push cliffano/studio:latest
 
 tools:
 	gem install puppet-lint r10k
 
-.PHONY: ci clean deps lint docker-studio docker-publish-studio tools
+.PHONY: ci clean deps lint docker-studio publish-docker-studio tools

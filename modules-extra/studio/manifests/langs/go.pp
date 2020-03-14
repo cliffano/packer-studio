@@ -1,7 +1,9 @@
 class studio::langs::go (
 ) {
 
-  include golang
+  class { 'golang':
+    repo_version => 'go1.14'
+  }
 
   class { 'hashicorp':
     install_dir        => '/usr/local/bin/',
@@ -9,6 +11,6 @@ class studio::langs::go (
   }
 
   class { 'hashicorp::terraform':
-    version => '0.11.10',
+    version => '0.12.21',
   }
 }

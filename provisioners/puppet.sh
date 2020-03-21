@@ -11,6 +11,7 @@ rm puppetlabs-release-pc1-xenial.deb
 apt-get update
 apt-get install --no-install-recommends -y puppet-agent
 rm -rf /var/lib/apt/lists/*
+add-apt-repository -y ppa:cpick/hub
 PATH=/opt/puppetlabs/server/bin:/opt/puppetlabs/puppet/bin:/opt/puppetlabs/bin:$PATH
 
 # Set locale to en_US UTF-8

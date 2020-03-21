@@ -9,4 +9,9 @@ class studio::langs::python (
     gunicorn   => 'absent',
   }
 
+  python::pip { 'ansible' :
+    pkgname => 'ansible',
+    ensure  => latest,
+   }
+
 }

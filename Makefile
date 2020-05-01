@@ -1,4 +1,4 @@
-ci: clean tools deps lint docker-studio
+ci: clean tools deps lint build-docker-studio
 
 clean:
 	rm -rf logs modules
@@ -15,14 +15,14 @@ lint:
 	shellcheck \
 		provisioners/*.sh
 
-aws-studio:
+build-aws-studio:
 	mkdir -p logs/
 	PACKER_LOG_PATH=logs/packer-aws-studio.log \
 		PACKER_LOG=1 \
 		packer build \
 		templates/aws-studio.json
 
-docker-studio:
+build-docker-studio:
 	mkdir -p logs/
 	PACKER_LOG_PATH=logs/packer-docker-studio.log \
 		PACKER_LOG=1 \
@@ -35,4 +35,4 @@ publish-docker-studio:
 tools:
 	gem install puppet-lint r10k
 
-.PHONY: ci clean deps lint docker-studio publish-docker-studio tools
+.PHONY: ci clean deps lint build-aws-studio build-docker-studio publish-docker-studio tools

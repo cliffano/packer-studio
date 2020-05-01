@@ -4,7 +4,7 @@
   "builders": [
     {
       "type": "docker",
-      "image": "ubuntu",
+      "image": "ubuntu:18.04",
       "commit": true,
       "run_command": [
         "-d", "-i", "-t", "{{.Image}}", "/bin/bash"

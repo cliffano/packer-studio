@@ -26,3 +26,5 @@ echo "puppet version: $(puppet --version)"
 echo "facter version: $(facter --version)"
 echo "hiera version: $(hiera --version)"
 facter os
+
+apt-get clean

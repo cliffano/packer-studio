@@ -1,4 +1,4 @@
-exec { 'apt-get update':
+exec { ['apt-get update', 'apt-get autoremove', 'apt-get autoclean']:
   path => [
     '/usr/local/sbin',
     '/usr/local/bin',

@@ -10,8 +10,13 @@ class studio::langs::python (
   }
 
   python::pip { 'ansible' :
-    pkgname => 'ansible',
     ensure  => latest,
-   }
+    pkgname => 'ansible',
+  }
+
+  python::pip { 'awscli' :
+    ensure  => latest,
+    pkgname => 'awscli',
+  }
 
 }

@@ -28,7 +28,7 @@
     },
     {
       "type": "puppet-masterless",
-      "puppet_bin_dir": "/opt/puppetlabs/bin/",
+      "puppet_bin_dir": "/opt/puppetlabs/puppet/bin",
       "extra_arguments": "--debug",
       "staging_directory": "/tmp/studio",
       "manifest_file": "provisioners/studio.pp",

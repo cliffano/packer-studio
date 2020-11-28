@@ -23,9 +23,10 @@ build-aws-studio:
 		templates/aws-studio.json
 
 build-docker-studio:
-	mkdir -p logs/
+	mkdir -p logs/ /tmp/packer-tmp/
 	PACKER_LOG_PATH=logs/packer-docker-studio.log \
 		PACKER_LOG=1 \
+		PACKER_TMP_DIR=/tmp/packer-tmp/ \
 		packer build \
 		templates/docker-studio.json
 

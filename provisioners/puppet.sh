@@ -7,7 +7,7 @@ apt-get update
 apt-get autoremove
 apt-get autoclean
 
-DEBIAN_FRONTEND="noninteractive" apt-get install --no-install-recommends -y wget apt-transport-https ca-certificates lsb-release sudo apt-utils software-properties-common locales
+DEBIAN_FRONTEND="noninteractive" apt-get install --no-install-recommends -y wget curl apt-transport-https ca-certificates lsb-release sudo apt-utils software-properties-common locales
 wget https://apt.puppetlabs.com/puppet6-release-xenial.deb
 dpkg -i puppet6-release-xenial.deb
 rm puppet6-release-xenial.deb
@@ -15,7 +15,6 @@ rm puppet6-release-xenial.deb
 apt-get update
 apt-get install --no-install-recommends -y puppet-agent
 rm -rf /var/lib/apt/lists/*
-# add-apt-repository -y ppa:cpick/hub
 PATH=/opt/puppetlabs/puppet/bin:/opt/puppetlabs/bin:$PATH
 
 # Set locale to en_US UTF-8

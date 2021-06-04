@@ -2,19 +2,14 @@ class studio::langs::go (
 ) {
 
   class { 'golang':
-    repo_version => 'go1.14'
+    repo_version => 'go1.16'
   }
 
-  class { 'hashicorp':
-    install_dir        => '/usr/local/bin/',
-    download_cache_dir => '/tmp/hashicorp-cache/',
+  class { 'hashicorp_install':
+    packages => {
+      'packer'    => '1.7.2',
+      'terraform' => '0.15.5',
+    }
   }
 
-  class { 'hashicorp::packer':
-    version => '1.5.4',
-  }
-
-  class { 'hashicorp::terraform':
-    version => '0.12.21',
-  }
 }

@@ -1,7 +1,7 @@
 class studio::langs::utils (
 ) {
 
-  package { ['zip', 'curl', 'vim', 'shellcheck', 'telnet', 'hub']:
+  package { ['zip', 'curl', 'vim', 'shellcheck', 'telnet', 'gpg-agent']:
     ensure   => latest,
     provider => apt,
   }

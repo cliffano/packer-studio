@@ -28,6 +28,7 @@ build-docker-studio:
 		PACKER_LOG=1 \
 		PACKER_TMP_DIR=/tmp/packer-tmp/ \
 		packer build \
+		-var-file=conf/docker-studio.json \
 		templates/docker-studio.json
 
 publish-docker-studio:

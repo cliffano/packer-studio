@@ -1,5 +1,6 @@
 {
   "variables": {
+    "version": "x.x.x"
   },
   "builders": [
     {
@@ -49,6 +50,14 @@
       "type": "docker-tag",
       "repository": "cliffano/studio",
       "tag": "latest",
+      "only": [
+        "docker"
+      ]
+    },
+    {
+      "type": "docker-tag",
+      "repository": "cliffano/studio",
+      "tag": "{{user `version`}}",
       "only": [
         "docker"
       ]

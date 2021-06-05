@@ -1,10 +1,10 @@
 {
   "resources": [
     {
-      "path": "conf/packer/vars/00_default.json",
+      "path": "conf/docker-studio.json",
       "type": "json",
       "params": {
-        "property": "packer_aem_version"
+        "property": "version"
       }
     },
     {

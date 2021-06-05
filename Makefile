@@ -1,3 +1,5 @@
+version ?= 1.0.0-pre.0
+
 ci: clean tools deps lint build-docker-studio
 
 clean:
@@ -36,6 +38,10 @@ publish-docker-studio:
 
 release:
 	rtk release
+
+publish:
+	docker image push cliffano/studio:latest
+	docker image push cliffano/studio:$(version)
 
 tools:
 	gem install puppet-lint r10k

@@ -8,6 +8,13 @@
       }
     },
     {
+      "path": "Makefile",
+      "type": "makefile",
+      "params": {
+        "variable": "pversion"
+      }
+    },
+    {
       "path": "CHANGELOG.md",
       "type": "keep-a-changelog"
     }

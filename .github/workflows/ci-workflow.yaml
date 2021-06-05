@@ -1,16 +1,9 @@
 ---
 name: CI
-on: [push, pull_request]
+on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        ruby-version: [2.7.x]
-    name: ruby ${{ matrix.node }}
     steps:
-      - uses: actions/checkout@v2
-      - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: ${{ matrix.ruby-version }}
-      - run: make ci
+    - uses: actions/checkout@v1
+    - uses: ./.github/actions/ci-action

@@ -5,7 +5,6 @@ class studio::langs::python (
     version    => 'system',
     pip        => 'present',
     dev        => 'present',
-    virtualenv => 'present',
     gunicorn   => 'absent',
   }
 

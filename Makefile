@@ -33,7 +33,10 @@ build-docker-studio:
 publish-docker-studio:
 	docker push cliffano/studio:latest
 
+release:
+	rtk release
+
 tools:
 	gem install puppet-lint r10k
 
-.PHONY: ci clean deps lint build-aws-studio build-docker-studio publish-docker-studio tools
+.PHONY: ci clean deps lint build-aws-studio build-docker-studio publish-docker-studio release tools

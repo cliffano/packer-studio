@@ -1,7 +1,8 @@
 <img align="right" src="https://raw.github.com/cliffano/packer-studio/master/avatar.jpg" alt="Avatar"/>
 
-[![Build Status](https://img.shields.io/travis/cliffano/packer-studio.svg)](http://travis-ci.org/cliffano/packer-studio)
+[![Build Status](https://github.com/cliffano/packer-studio/workflows/CI/badge.svg)](https://github.com/cliffano/packer-studio/actions?query=workflow%3ACI)
 [![Docker Pulls Count](https://img.shields.io/docker/pulls/cliffano/studio.svg)](https://hub.docker.com/r/cliffano/studio/)
+[![Vulnerability Scanning Status](https://snyk.io/test/github/cliffano/packer-studio/badge.svg)](https://snyk.io/test/github/cliffano/packer-studio)
 
 Packer Studio
 ---------------

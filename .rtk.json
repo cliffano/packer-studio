@@ -11,7 +11,7 @@
       "path": "Makefile",
       "type": "makefile",
       "params": {
-        "variable": "pversion"
+        "variable": "version"
       }
     },
     {

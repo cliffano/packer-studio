@@ -1,15 +1,17 @@
 version ?= 1.0.0-pre.0
 
-ci: clean tools deps lint build-docker-studio
+ci: clean deps lint build-docker-studio
 
 clean:
 	rm -rf logs modules
 
 deps:
-	r10k puppetfile install --moduledir modules
+	gem install bundler
+	bundle install --binstubs -j4
+	bundle exec r10k puppetfile install --moduledir modules
 
 lint:
-	puppet-lint \
+	bundle exec puppet-lint \
 		--fail-on-warnings \
 		--no-documentation-check \
 		provisioners/*.pp \
@@ -40,7 +42,4 @@ publish-docker-studio:
 release:
 	rtk release
 
-tools:
-	gem install puppet-lint r10k
-
-.PHONY: ci clean deps lint build-aws-studio build-docker-studio publish-docker-studio release tools
+.PHONY: ci clean deps lint build-aws-studio build-docker-studio publish-docker-studio release

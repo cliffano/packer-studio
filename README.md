@@ -5,7 +5,7 @@
 [![Vulnerability Scanning Status](https://snyk.io/test/github/cliffano/packer-studio/badge.svg)](https://snyk.io/test/github/cliffano/packer-studio)
 
 Packer Studio
----------------
+-------------
 
 Packer Studio is a Packer builder of Docker image which contains the tech stacks that I use the most.
 

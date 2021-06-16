@@ -34,14 +34,11 @@ build-docker-studio:
 		templates/docker-studio.json
 
 publish-docker-studio:
-	docker push cliffano/studio:latest
+	docker image push cliffano/studio:latest
+	docker image push cliffano/studio:$(version)
 
 release:
 	rtk release
-
-publish:
-	docker image push cliffano/studio:latest
-	docker image push cliffano/studio:$(version)
 
 tools:
 	gem install puppet-lint r10k

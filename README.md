@@ -9,7 +9,7 @@ Packer Studio
 
 Packer Studio is a Packer builder of Docker image which contains the tech stacks that I use the most.
 
-This image is used to launch a container for me to code in Go, Java, JavaScript, Python, and Ruby.
+This image is used to launch a container for me to code in Go, Java, JavaScript, Python, Ruby, and Rust.
 
 Installation
 ------------

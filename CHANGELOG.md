@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Added
+- Add release-* and publish-* GitHub Actions
+
 ### Changed
 - Move Ruby dependencies to Gemfile
 - Upgrade Packer to 1.7.8

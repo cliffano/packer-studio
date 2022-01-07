@@ -7,8 +7,8 @@ class studio::langs::go (
 
   class { 'hashicorp_install':
     packages => {
-      'packer'    => '1.7.2',
-      'terraform' => '0.15.5',
+      'packer'    => '1.7.8',
+      'terraform' => '1.1.2',
     }
   }
 

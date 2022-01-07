@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Move Ruby dependencies to Gemfile
+- Upgrade Packer to 1.7.8
+- Upgrade Terraform to 1.1.2
 
 ## 1.1.0 - 2021-06-05
 ### Added

@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Fixed
+- Fix missing exec permission for publish entrypoint script
+
 ## 1.2.0 - 2022-01-19
 ### Added
 - Add release-* and publish-* GitHub Actions

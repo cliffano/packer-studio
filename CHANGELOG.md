@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Changed
+- Upgrade Go to 1.17
+- Upgrade Packer to 1.7.9
+- Upgrade Terraform to 1.1.4
+
 ## 1.2.1 - 2022-01-19
 ### Fixed
 - Fix missing exec permission for publish entrypoint script

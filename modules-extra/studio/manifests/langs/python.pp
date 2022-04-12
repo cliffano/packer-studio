@@ -18,4 +18,9 @@ class studio::langs::python (
     pkgname => 'awscli',
   }
 
+  python::pip { 'checkov' :
+    ensure  => latest,
+    pkgname => 'awscli',
+  }
+
 }

@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Added
+- Add TFLint
+
 ## 1.3.0 - 2022-01-30
 ### Changed
 - Upgrade Go to 1.17

@@ -12,4 +12,8 @@ class studio::langs::go (
     }
   }
 
+  exec { 'curl -s https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash':
+    path => ['/bin', '/usr/bin', '/sbin', '/usr/sbin'],
+  }
+
 }

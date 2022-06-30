@@ -17,7 +17,8 @@ class studio::langs::go (
   }
 
   exec { 'go install github.com/aquasecurity/tfsec/cmd/tfsec@latest':
-    path => ['/bin', '/usr/bin', '/sbin', '/usr/sbin', '/usr/local/go/bin/'],
+    path    => ['/bin', '/usr/bin', '/sbin', '/usr/sbin', '/usr/local/go/bin/'],
+    require => Class['golang'],
   }
 
 }

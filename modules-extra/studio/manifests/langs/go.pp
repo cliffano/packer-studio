@@ -21,4 +21,8 @@ class studio::langs::go (
     require => Class['golang'],
   }
 
+  exec { 'wget https://github.com/mikefarah/yq/releases/download/v4.25.3/yq_linux_amd64 -O /usr/bin/yq && chmod +x /usr/bin/yq':
+    path => ['/bin', '/usr/bin', '/sbin', '/usr/sbin'],
+  }
+
 }

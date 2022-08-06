@@ -26,7 +26,8 @@ class studio::langs::go (
   }
   include '::gitclone'
   gitclone::repo { 'checkmake' :
-    source      => 'https://github.com/mrtazz/checkmake',
+    source      => 'https://github.com/mrtazz/checkmake.git',
+    branch      => 'main',
     destination => '/tmp/checkmake',
     owner       => 'root',
     group       => 'root',

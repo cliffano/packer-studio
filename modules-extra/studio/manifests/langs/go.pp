@@ -32,8 +32,7 @@ class studio::langs::go (
     owner       => 'root',
     group       => 'root',
   }
-  exec { 'make':
-    path => ['/bin', '/usr/bin', '/sbin', '/usr/sbin'],
+  exec { '/usr/bin/make':
     cwd  => '/tmp/checkmake',
   }
   exec { 'cp checkmake /usr/bin/':

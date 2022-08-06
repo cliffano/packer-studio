@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add checkmake
 - Add Bob
+- Add info script to list down all versions of provisioned software
 
 ## 1.5.0 - 2022-07-01
 ### Added

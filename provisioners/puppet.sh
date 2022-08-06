@@ -33,7 +33,7 @@ apt-get update
 DEBIAN_FRONTEND="noninteractive" apt-get install -y docker-ce docker-ce-cli containerd.io
 
 echo "****************************************"
-echo "* Host info"
+echo "* Initial provisioned sofware info"
 echo "****************************************"
 echo "PATH: $PATH"
 echo "puppet version: $(puppet --version)"

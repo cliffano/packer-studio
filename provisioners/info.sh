@@ -1,3 +1,6 @@
+#!/bin/sh
+set -o errexit
+
 echo "****************************************"
 echo "* Provisioned software info"
 echo "****************************************"

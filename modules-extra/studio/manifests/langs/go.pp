@@ -20,4 +20,21 @@ class studio::langs::go (
     path => ['/bin', '/usr/bin', '/sbin', '/usr/sbin'],
   }
 
+  package { 'pandoc':
+    ensure   => latest,
+    provider => apt,
+  }
+  include '::gitclone'
+  gitclone::repo { '' :
+      source      => 'https://github.com/mrtazz/checkmake.git',
+      destination => '/tmp/checkmake',
+  }
+  exec { 'make':
+    path => ['/bin', '/usr/bin', '/sbin', '/usr/sbin'],
+    cwd  => '/tmp/checkmake',
+  }
+  exec { 'cp checkmake /usr/bin/':
+    path => ['/bin', '/usr/bin', '/sbin', '/usr/sbin'],
+    cwd  => '/tmp/checkmake',
+  }
 }

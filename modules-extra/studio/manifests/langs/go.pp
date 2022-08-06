@@ -25,7 +25,7 @@ class studio::langs::go (
     provider => apt,
   }
   include '::gitclone'
-  gitclone::repo { '' :
+  gitclone::repo { 'checkmake' :
       source      => 'https://github.com/mrtazz/checkmake.git',
       destination => '/tmp/checkmake',
   }

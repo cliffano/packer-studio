@@ -32,7 +32,15 @@ class studio::langs::go (
     group       => 'root',
   } -> exec { '/usr/bin/make':
     path        => ['/usr/local/go/bin', '/bin', '/usr/bin', '/sbin', '/usr/sbin'],
-    environment => ['BUILDER_NAME=pakkunbot', 'BUILDER_EMAIL=blah+pakkun@cliffano.com', 'HOME=/root', 'GOPATH=/root/go', 'GOOS=linux', 'GOARCH=amd64', 'GOCACHE=/root/.cache/go-build'],
+    environment => [
+      'BUILDER_NAME=pakkunbot',
+      'BUILDER_EMAIL=blah+pakkun@cliffano.com',
+      'HOME=/root',
+      'GOPATH=/root/go',
+      'GOOS=linux',
+      'GOARCH=amd64',
+      'GOCACHE=/root/.cache/go-build'
+    ],
     cwd         => '/tmp/checkmake',
   } -> exec { 'cp checkmake /usr/bin/':
     path => ['/bin', '/usr/bin', '/sbin', '/usr/sbin'],

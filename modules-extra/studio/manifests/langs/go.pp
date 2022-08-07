@@ -30,9 +30,10 @@ class studio::langs::go (
     destination => '/tmp/checkmake',
     owner       => 'root',
     group       => 'root',
-  } -> exec { 'BUILDER_NAME=pakkunbot BUILDER_EMAIL=blah+pakkun@cliffano.com /usr/bin/make':
-    path => ['/bin', '/usr/bin', '/sbin', '/usr/sbin'],
-    cwd  => '/tmp/checkmake',
+  } -> exec { '/usr/bin/make':
+    path        => ['/bin', '/usr/bin', '/sbin', '/usr/sbin'],
+    environment => ['BUILDER_NAME=pakkunbot', 'BUILDER_EMAIL=blah+pakkun@cliffano.com'],
+    cwd         => '/tmp/checkmake',
   } -> exec { 'cp checkmake /usr/bin/':
     path => ['/bin', '/usr/bin', '/sbin', '/usr/sbin'],
     cwd  => '/tmp/checkmake',

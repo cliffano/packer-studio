@@ -10,4 +10,19 @@ class studio::langs::javascript (
     provider => npm,
   }
 
+  package { 'nestor':
+    ensure   => latest,
+    provider => npm,
+  }
+
+  package { 'repoman':
+    ensure   => latest,
+    provider => npm,
+  }
+
+  package { 'rtk':
+    ensure   => latest,
+    provider => npm,
+  }
+
 }

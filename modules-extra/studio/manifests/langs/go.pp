@@ -34,7 +34,7 @@ class studio::langs::go (
     path        => ['/usr/local/go/bin', '/bin', '/usr/bin', '/sbin', '/usr/sbin'],
     environment => [
       'BUILDER_NAME=pakkunbot',
-      'BUILDER_EMAIL=blah+pakkun@cliffano.com',
+      'BUILDER_EMAIL=blah+blah+pakkun@cliffano.com',
       'HOME=/root',
       'GOPATH=/root/go',
       'GOOS=linux',

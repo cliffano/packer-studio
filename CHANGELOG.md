@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Add ImageMagick
+- Add dnf
 
 ## 1.6.0 - 2022-08-07
 ### Added

@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add ImageMagick
 - Add dnf
 - Add gh
+- Add yum
 
 ## 1.6.0 - 2022-08-07
 ### Added

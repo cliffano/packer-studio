@@ -32,6 +32,9 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docke
 apt-get update
 DEBIAN_FRONTEND="noninteractive" apt-get install -y docker-ce docker-ce-cli containerd.io
 
+# Install yum, for rare package unavailable from apt
+apt-get install -y yum
+
 echo "****************************************"
 echo "* Initial provisioned sofware info"
 echo "****************************************"

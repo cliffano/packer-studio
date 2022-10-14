@@ -27,12 +27,4 @@ class studio::langs::utils (
     group   => 'staff',
   }
 
-  exec { 'dnf install "dnf-command(config-manager)"':
-    path => ['/bin', '/usr/bin', '/sbin', '/usr/sbin'],
-  } -> exec { 'dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo':
-    path => ['/bin', '/usr/bin', '/sbin', '/usr/sbin'],
-  } ->  package { ['gh']:
-    ensure   => latest,
-    provider => dnf,
-  }
 }

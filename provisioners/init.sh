@@ -34,7 +34,7 @@ DEBIAN_FRONTEND="noninteractive" apt-get install -y docker-ce docker-ce-cli cont
 
 # Install GH CLI, adapted from
 # https://garywoodfine.com/how-to-install-github-cli-on-linux/
-apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 23F3D4EA75716059
 apt-add-repository https://cli.github.com/packages
 apt update
 apt install gh

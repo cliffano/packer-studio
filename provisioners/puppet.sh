@@ -32,6 +32,13 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docke
 apt-get update
 DEBIAN_FRONTEND="noninteractive" apt-get install -y docker-ce docker-ce-cli containerd.io
 
+# Install GH CLI, adapted from
+# https://garywoodfine.com/how-to-install-github-cli-on-linux/
+apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+apt-add-repository https://cli.github.com/packages
+apt update
+apt install gh
+
 echo "****************************************"
 echo "* Initial provisioned sofware info"
 echo "****************************************"

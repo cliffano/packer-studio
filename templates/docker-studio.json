@@ -25,7 +25,7 @@
     },
     {
       "type": "shell",
-      "script": "provisioners/puppet.sh"
+      "script": "provisioners/init.sh"
     },
     {
       "type": "puppet-masterless",

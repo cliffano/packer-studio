@@ -6,10 +6,7 @@ class studio::langs::rust (
   }
 
   # https://betterprogramming.pub/5-cli-tools-made-with-rust-to-improve-already-popular-tools-506af07b6d54
-  package { 'build-essential':
-    ensure   => latest,
-    provider => apt,
-  } -> exec { 'cargo install bat ripgrep du-dust bottom exa':
+  exec { 'cargo install bat ripgrep du-dust bottom exa':
     path => ['/root/.cargo/bin/'],
   }
 

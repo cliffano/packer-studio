@@ -1,6 +1,8 @@
 ---
 name: Release Minor
 on: [workflow_dispatch]
+env:
+  GIT_TERMINAL_PROMPT: 1
 jobs:
   build:
     runs-on: ubuntu-latest

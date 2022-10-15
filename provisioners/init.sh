@@ -44,6 +44,8 @@ apt-add-repository https://cli.github.com/packages
 apt update
 apt install gh
 
+unset DEBIAN_FRONTEND
+
 echo "****************************************"
 echo "* Initial provisioned sofware info"
 echo "****************************************"

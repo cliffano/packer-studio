@@ -5,8 +5,8 @@ apt-get update
 apt-get autoremove
 apt-get autoclean
 
-# Install build-essential
-apt-get install -y build-essential
+# Install common utilities
+apt-get install -y apt-utils build-essential
 
 # Install Puppet, adapted from
 # https://github.com/puppetlabs/puppet-in-docker/blob/master/puppet-agent-ubuntu/Dockerfile

@@ -7,7 +7,7 @@ class studio::langs::rust (
 
   # https://betterprogramming.pub/5-cli-tools-made-with-rust-to-improve-already-popular-tools-506af07b6d54
   exec { 'cargo install bat ripgrep du-dust bottom exa':
-    path => ['/root/.cargo/bin/'],
+    path => ['/root/.cargo/bin/', '/bin', '/usr/bin', '/sbin', '/usr/sbin'],
   }
 
 }

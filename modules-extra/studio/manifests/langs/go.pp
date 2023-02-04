@@ -2,13 +2,13 @@ class studio::langs::go (
 ) {
 
   class { 'golang':
-    repo_version => 'go1.17'
+    repo_version => 'go1.20'
   }
 
   class { 'hashicorp_install':
     packages => {
-      'packer'    => '1.7.9',
-      'terraform' => '1.1.4',
+      'packer'    => '1.8.5',
+      'terraform' => '1.3.7',
     }
   }
 

@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Changed
+- Upgrade node.js to 18.x
+
 ## 1.8.0 - 2023-02-04
 ### Changed
 - Upgrade Go to 1.20

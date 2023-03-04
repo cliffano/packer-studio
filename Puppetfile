@@ -8,7 +8,7 @@ mod 'maestrodev-maven', '1.4.0'
 mod 'maestrodev-wget', '1.7.3'
 mod 'paulosuzart-sdkman',
   :git    => 'https://github.com/cliffano/puppet-sdkman',
-  :commit => 'b574e0d7931441a70f8c551c9126c15a59a0565a'
+  :commit => 'df4a38be3ac1733922ffa3f98a3eadca245ad073'
 mod 'puppet-archive', '1.3.0'
 mod 'puppet-nodejs', '8.1.0'
 mod 'puppet-python', '6.0.0'

@@ -7,7 +7,7 @@ mod 'justinjl-gitclone', '1.0.0'
 mod 'maestrodev-maven', '1.4.0'
 mod 'maestrodev-wget', '1.7.3'
 mod 'paulosuzart-sdkman',
-  :git    => 'git://github.com/cliffano/puppet-sdkman.git',
+  :git    => 'https://github.com/cliffano/puppet-sdkman',
   :commit => 'b574e0d7931441a70f8c551c9126c15a59a0565a'
 mod 'puppet-archive', '1.3.0'
 mod 'puppet-nodejs', '8.1.0'

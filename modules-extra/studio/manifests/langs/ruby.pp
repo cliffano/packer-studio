@@ -11,6 +11,12 @@ class studio::langs::ruby (
     provider => apt,
   }
 
+  # Needed by psych gem
+  package { 'libyaml-dev':
+    ensure   => latest,
+    provider => apt,
+  }
+
   package { 'bundler':
     ensure   => latest,
     provider => gem;

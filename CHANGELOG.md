@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add libyaml-dev
 
+### Changed
+- Switch sdkman Puppet module to use cliffano/puppet-sdkman fork
+
 ## 1.9.0 - 2023-02-13
 ### Changed
 - Upgrade node.js to 18.x

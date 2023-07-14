@@ -2,7 +2,7 @@ class studio::langs::javascript (
 ) {
 
   class { 'nodejs':
-    repo_url_suffix => 20.x',
+    repo_url_suffix => '20.x',
   }
 
   package { 'bob':

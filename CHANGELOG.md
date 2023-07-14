@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Changed
+- Upgrade node.js to 20.x
+- Upgrade Packer to 1.9.1
+- Upgrade Terraform to 1.5.3
+
 ## 1.10.0 - 2023-03-04
 ### Added
 - Add libyaml-dev

@@ -8,7 +8,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unreleased
 ### Changed
 - Upgrade RTK to 3.0.0
-- Downgrade Packer to 1.8.7 to allow future transition of puppet-masterless to plugin
 
 ## 1.11.0 - 2023-07-14
 ### Changed

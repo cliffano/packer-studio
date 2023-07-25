@@ -10,6 +10,8 @@ class studio::langs::go (
       'packer'    => '1.9.1',
       'terraform' => '1.5.3',
     }
+  } -> exec { 'packer plugins install github.com/hashicorp/packer-plugin-puppet':
+    path => ['/bin', '/usr/bin', '/sbin', '/usr/sbin'],
   }
 
   exec { 'curl -s https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash':

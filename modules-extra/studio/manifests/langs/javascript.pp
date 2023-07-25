@@ -21,7 +21,7 @@ class studio::langs::javascript (
   }
 
   package { 'rtk':
-    ensure   => latest,
+    ensure   => '3.0.0',
     provider => npm,
   }
 

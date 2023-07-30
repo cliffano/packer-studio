@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Fixed
+- Fix publish GH Action to use studio:1.10.0
+
 ## 1.12.0 - 2023-07-30
 ### Added
 - Add puppet-masterless Packer plugin installation

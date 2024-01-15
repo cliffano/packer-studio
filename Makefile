@@ -1,4 +1,4 @@
-version ?= 1.13.1-pre.0
+version ?= 1.14.0
 
 ci: clean deps lint build-docker-studio
 

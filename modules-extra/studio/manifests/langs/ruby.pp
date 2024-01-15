@@ -18,7 +18,7 @@ class studio::langs::ruby (
   }
 
   package { 'bundler':
-    ensure   => latest,
+    ensure   => '2.4.22',
     provider => gem;
   }
 

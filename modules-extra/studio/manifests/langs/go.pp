@@ -7,8 +7,8 @@ class studio::langs::go (
 
   class { 'hashicorp_install':
     packages => {
-      'packer'    => '1.9.1',
-      'terraform' => '1.5.3',
+      'packer'    => '1.10.0',
+      'terraform' => '1.6.6',
     }
   } -> exec { 'packer plugins install github.com/hashicorp/puppet':
     path => ['/bin', '/usr/bin', '/sbin', '/usr/sbin'],

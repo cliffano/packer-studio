@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Upgrade RTK to 3.1.1
+- Upgrade Terraform to 1.6.6
+- Upgrade Packer to 1.10.0
 
 ## 1.13.0 - 2023-10-14
 ### Changed

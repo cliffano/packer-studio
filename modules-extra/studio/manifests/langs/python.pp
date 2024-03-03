@@ -23,4 +23,9 @@ class studio::langs::python (
     pkgname => 'checkov',
   }
 
+  package { 'python3.8-venv':
+    ensure   => latest,
+    provider => apt,
+  }
+
 }

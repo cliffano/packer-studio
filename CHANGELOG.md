@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Added
+- Add Packer plugins for Docker and Puppet
+
 ## 1.15.0 - 2024-03-04
 ### Added
 - Add python3.8-venv package

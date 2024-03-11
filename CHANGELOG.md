@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Add Packer plugins for Docker and Puppet
+- Add deps-upgrade target to upgrade Puppetfile modules via Rake puppetfile-updater plugin
 
 ### Changed
 - Change Python installation from system to 3.12

@@ -1,14 +1,14 @@
 #!/bin/sh
 set -o errexit
 
-export DEBIAN_FRONTEND="noninteractive" 
+export DEBIAN_FRONTEND="noninteractive"
 
 apt-get update
 apt-get autoremove
 apt-get autoclean
 
 # Install common utilities
-apt-get install -y apt-utils build-essential gcc cpp gcc-multilib
+apt-get install -y apt-utils build-essential gcc cpp gcc-multilib libaugeas-dev
 
 # Install Puppet, adapted from
 # https://github.com/puppetlabs/puppet-in-docker/blob/master/puppet-agent-ubuntu/Dockerfile
@@ -27,7 +27,7 @@ PATH=/opt/puppetlabs/puppet/bin:/opt/puppetlabs/bin:$PATH
 locale-gen en_US.UTF-8
 update-locale LANG=en_US.UTF-8
 
-# Install Docker, adapted from 
+# Install Docker, adapted from
 # https://docs.docker.com/engine/install/ubuntu/
 apt-get update
 apt-get remove docker docker.io containerd runc

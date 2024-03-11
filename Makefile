@@ -12,6 +12,9 @@ deps:
 	bundle install --binstubs -j4
 	bundle exec r10k puppetfile install --moduledir modules
 
+deps-upgrade:
+	rake puppetfile_mods_upgrade
+
 lint:
 	bundle exec puppet-lint \
 		--fail-on-warnings \
@@ -44,4 +47,4 @@ publish-docker-studio:
 release:
 	rtk release
 
-.PHONY: ci clean deps lint build-aws-studio build-docker-studio publish-docker-studio release
+.PHONY: ci clean deps deps-upgrade lint build-aws-studio build-docker-studio publish-docker-studio release

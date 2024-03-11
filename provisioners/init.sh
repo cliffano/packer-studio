@@ -8,7 +8,7 @@ apt-get autoremove
 apt-get autoclean
 
 # Install common utilities
-apt-get install -y apt-utils build-essential gcc cpp gcc-multilib
+apt-get install -y apt-utils build-essential gcc cpp gcc-multilib libaugeas-dev pkg-config
 
 # Install Puppet, adapted from
 # https://github.com/puppetlabs/puppet-in-docker/blob/master/puppet-agent-ubuntu/Dockerfile

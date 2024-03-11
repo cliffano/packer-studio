@@ -2,7 +2,7 @@ class studio::langs::python (
 ) {
 
   class { 'python' :
-    version  => 'system',
+    version  => '3.12',
     pip      => 'present',
     dev      => 'present',
     gunicorn => 'absent',
@@ -23,9 +23,9 @@ class studio::langs::python (
     pkgname => 'checkov',
   }
 
-  package { 'python3.8-venv':
-    ensure   => latest,
-    provider => apt,
+  python::pip { 'virtualenv' :
+    ensure  => latest,
+    pkgname => 'virtualenv',
   }
 
 }

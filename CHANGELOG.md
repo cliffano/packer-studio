@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add Packer plugins for Docker and Puppet
 
+### Changed
+- Change Python installation from system to 3.12
+- Upgrade puppet-python to 7.3.0
+
 ## 1.15.0 - 2024-03-04
 ### Added
 - Add python3.8-venv package

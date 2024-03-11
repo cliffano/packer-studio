@@ -11,7 +11,7 @@ mod 'paulosuzart-sdkman',
   :commit => 'df4a38be3ac1733922ffa3f98a3eadca245ad073'
 mod 'puppet-archive', '1.3.0'
 mod 'puppet-nodejs', '8.1.0'
-mod 'puppet-python', '6.0.0'
+mod 'puppet-python', '7.3.0'
 mod 'puppetlabs-accounts', '2.0.0'
 mod 'puppetlabs-apt', '3.0.0'
 mod 'puppetlabs-git', '0.5.0'

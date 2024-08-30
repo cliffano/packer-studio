@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Change Python installation from system to 3.12
-- Upgrade puppet-python to 7.3.0
+- Upgrade Puppet to 8.x
 
 ## 1.15.0 - 2024-03-04
 ### Added

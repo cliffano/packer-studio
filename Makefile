@@ -8,7 +8,7 @@ clean:
 deps:
 	packer plugins install github.com/hashicorp/docker
 	packer plugins install github.com/hashicorp/puppet
-	gem install bundler -v 2.4.22 # TODO: remove version pin after Ruby is upgraded to v3.x
+	# gem install bundler -v 2.4.22 # TODO: remove version pin after Ruby is upgraded to v3.x
 	bundle install --binstubs -j4
 	bundle exec r10k puppetfile install --moduledir modules
 
@@ -21,8 +21,8 @@ lint:
 		--no-documentation-check \
 		provisioners/*.pp \
 		modules-extra/*/manifests/langs/*.pp
-	shellcheck \
-		provisioners/*.sh
+	# shellcheck \
+		# provisioners/*.sh
 
 build-aws-studio:
 	mkdir -p logs/

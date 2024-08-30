@@ -14,9 +14,9 @@ apt-get install -y apt-utils build-essential gcc cpp gcc-multilib libaugeas-dev 
 # https://github.com/puppetlabs/puppet-in-docker/blob/master/puppet-agent-ubuntu/Dockerfile
 # Will switch to Puppetlabs' Docker image if they provide puppet-masterless
 apt-get install --no-install-recommends -y wget apt-transport-https ca-certificates lsb-release sudo apt-utils software-properties-common locales
-wget https://apt.puppetlabs.com/puppet6-release-xenial.deb
-dpkg -i puppet6-release-xenial.deb
-rm puppet6-release-xenial.deb
+wget https://apt.puppetlabs.com/puppet8-release-jammy.deb
+dpkg -i puppet8-release-jammy.deb
+rm puppet8-release-jammy.deb
 
 apt-get update
 apt-get install --no-install-recommends -y puppet-agent
@@ -38,11 +38,14 @@ apt-get update
 DEBIAN_FRONTEND="noninteractive" apt-get install -y docker-ce docker-ce-cli containerd.io
 
 # Install GH CLI, adapted from
-# https://garywoodfine.com/how-to-install-github-cli-on-linux/
-apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 23F3D4EA75716059
-apt-add-repository https://cli.github.com/packages
-apt update
-apt install gh
+# https://github.com/cli/cli/blob/trunk/docs/install_linux.md
+(type -p wget >/dev/null || (sudo apt update && sudo apt-get install wget -y)) \
+&& sudo mkdir -p -m 755 /etc/apt/keyrings \
+&& wget -qO- https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null \
+&& sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg \
+&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
+&& sudo apt update \
+&& sudo apt install gh -y
 
 unset DEBIAN_FRONTEND
 

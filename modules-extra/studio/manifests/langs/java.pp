@@ -3,14 +3,18 @@ class studio::langs::java (
   $maven_version = '3.5.0',
 ) {
 
-  class { 'oracle_java':
-    version => $java_version,
-    type    => 'jdk',
+  # class { 'oracle_java':
+  #   version => $java_version,
+  #   type    => 'jdk',
+  # }
+
+  class { 'java':
+    distribution => 'jdk',
   }
 
-  class { 'maven::maven':
-    version => $maven_version,
-  }
+  # class { 'maven::maven':
+    # version => $maven_version,
+  # }
 
   include sdkman
 

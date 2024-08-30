@@ -2,7 +2,7 @@ class studio::langs::go (
 ) {
 
   class { 'golang':
-    repo_version => 'go1.20'
+    ensure => latest,
   }
 
   class { 'hashicorp_install':

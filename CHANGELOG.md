@@ -8,12 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unreleased
 
 ### Added
-- Add Packer plugins for Docker and Puppet
-- Add deps-upgrade target to upgrade Puppetfile modules via Rake puppetfile-updater plugin
+- Add Packer plugins for Docker and Ansible
 
 ### Changed
-- Change Python installation from system to 3.12
-- Upgrade Puppet to 8.x
+- Replace Packer template format to HCL2
+- Replace Puppet with Ansible for provisioning
 
 ## 1.15.0 - 2024-03-04
 ### Added

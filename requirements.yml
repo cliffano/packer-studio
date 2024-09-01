@@ -1,0 +1,13 @@
+roles:
+  - name: andrewrothstein.go
+  - name: andrewrothstein.hashi
+  - name: andrewrothstein.maven
+  - name: andrewrothstein.node
+  - name: andrewrothstein.ruby
+  - name: andrewrothstein.rust
+  - name: andrewrothstein.tflint
+  - name: andrewrothstein.trivy
+  - name: andrewrothstein.yq
+
+collections:
+  - name: community.general

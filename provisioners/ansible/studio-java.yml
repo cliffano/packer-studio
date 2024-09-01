@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+
+  vars:
+    maven_ver:
+      major: 3
+      minor: 9
+      patch: 9
+
+  roles:
+    - andrewrothstein.maven

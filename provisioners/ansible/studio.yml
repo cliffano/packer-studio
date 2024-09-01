@@ -1,0 +1,19 @@
+---
+- hosts: localhost
+
+  roles:
+    - andrewrothstein.yq
+
+  tasks:
+
+    - ansible.builtin.apt:
+        pkg:
+          - jq
+          - shellcheck
+          - telnet
+          - zip
+
+    - ansible.builtin.file:
+        path: /root/.local/bin
+        state: directory
+        mode: '0755'

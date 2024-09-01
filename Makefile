@@ -1,35 +1,26 @@
 version ?= 1.15.1-pre.0
 
-ci: clean deps lint build-docker-studio
+ci: clean stage deps lint build-docker-studio
 
 clean:
-	rm -rf logs modules
+	rm -rf stage/ logs/ /tmp/packer-tmp/
+
+stage:
+	mkdir -p stage/ stage/ansible/roles/ stage/ansible/collections/
 
 deps:
-	packer plugins install github.com/hashicorp/docker
-	packer plugins install github.com/hashicorp/puppet
-	# gem install bundler -v 2.4.22 # TODO: remove version pin after Ruby is upgraded to v3.x
-	bundle install --binstubs -j4
-	bundle exec r10k puppetfile install --moduledir modules
-
-deps-upgrade:
-	rake puppetfile_mods_upgrade
+	packer plugins install github.com/hashicorp/docker 1.0.10
+	packer plugins install github.com/hashicorp/ansible 1.1.1
 
 lint:
-	bundle exec puppet-lint \
-		--fail-on-warnings \
-		--no-documentation-check \
-		provisioners/*.pp \
-		modules-extra/*/manifests/langs/*.pp
+	echo "TODO: Ansible Lint"
+	# bundle exec puppet-lint \
+	# 	--fail-on-warnings \
+	# 	--no-documentation-check \
+	# 	provisioners/*.pp \
+	# 	modules-extra/*/manifests/langs/*.pp
 	# shellcheck \
-		# provisioners/*.sh
-
-build-aws-studio:
-	mkdir -p logs/
-	PACKER_LOG_PATH=logs/packer-aws-studio.log \
-		PACKER_LOG=1 \
-		packer build \
-		templates/aws-studio.json
+		# provisioners/shell/*.sh
 
 build-docker-studio:
 	mkdir -p logs/ /tmp/packer-tmp/
@@ -38,7 +29,7 @@ build-docker-studio:
 		PACKER_TMP_DIR=/tmp/packer-tmp/ \
 		packer build \
 		-var-file=conf/docker-studio.json \
-		templates/docker-studio.json
+		templates/ansible/docker-studio.pkr.hcl
 
 publish-docker-studio:
 	docker image push cliffano/studio:latest
@@ -47,4 +38,4 @@ publish-docker-studio:
 release:
 	rtk release
 
-.PHONY: ci clean deps deps-upgrade lint build-aws-studio build-docker-studio publish-docker-studio release
+.PHONY: ci clean deps lint build-aws-studio build-docker-studio publish-docker-studio release

@@ -5,4 +5,4 @@
 
     - ansible.builtin.apt:
         pkg:
-          - virtualenv
+          - python3-venv

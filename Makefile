@@ -29,7 +29,7 @@ build-docker-studio:
 		PACKER_TMP_DIR=/tmp/packer-tmp/ \
 		packer build \
 		-var-file=conf/docker-studio.json \
-		templates/ansible/docker-studio.pkr.hcl
+		templates/packer/docker-studio.pkr.hcl
 
 publish-docker-studio:
 	docker image push cliffano/studio:latest

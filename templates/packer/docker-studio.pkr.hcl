@@ -28,7 +28,7 @@ source "docker" "studio" {
   ]
   changes = [
     "ENV LANG en_US.UTF-8",
-    "ENV PATH /usr/local/maven/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
+    "ENV PATH /usr/local/go/bin:/usr/local/maven/bin:/usr/local/node-v22.7.0-linux-x64/bin/:/usr/local/openjdk-jdk/bin/:/root/.cargo/bin/:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
   ]
 }
 

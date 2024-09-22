@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add python3-venv to Python provisions
 
+### Fixed
+- Fix env PATH to include provisioned software
+
 ## 2.0.1 - 2024-09-04
 ### Fixed
 - Fix publish GH Action workflow

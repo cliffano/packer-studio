@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Added
+- Add awscli Python package
+
 ## 2.2.0 - 2024-09-27
 
 ## 2.1.0 - 2024-09-22

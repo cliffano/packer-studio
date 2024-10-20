@@ -11,6 +11,7 @@
           - jq
           - shellcheck
           - telnet
+          - vim
           - zip
 
     - ansible.builtin.file:

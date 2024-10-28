@@ -18,3 +18,7 @@
     - andrewrothstein.hashi
     - andrewrothstein.tflint
     - andrewrothstein.trivy
+
+  tasks:
+
+    - ansible.builtin.command: go install github.com/mrtazz/checkmake/cmd/checkmake@latest

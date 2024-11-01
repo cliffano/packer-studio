@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Added
+- Add /usr/local/node/ symlink to version specific node path
+
 ## 2.4.1 - 2024-11-01
 ### Fixed
 - Fix checkmake inclusion in PATH

@@ -13,3 +13,9 @@
     - community.general.npm:
         name: bob
         global: true
+
+    - name: Create symbolic link for easy access to node binaries on environments which override the PATH
+      ansible.builtin.file:
+        src: "/usr/local/node-v{{ node_ver }}-linux-x64"
+        dest: /usr/local/node
+        state: link

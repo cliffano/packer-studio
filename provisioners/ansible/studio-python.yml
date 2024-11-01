@@ -3,9 +3,7 @@
 
   tasks:
 
-    - ansible.builtin.apt:
-        pkg:
-          - python3-venv
-
     - ansible.builtin.pip:
-        name: awscli
+        name:
+          - awscli
+          - virtualenv

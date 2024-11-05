@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Added
+- Re-add python3-venv
+
 ## 2.5.0 - 2024-11-01
 ### Added
 - Add /usr/local/node/ symlink to version specific node path

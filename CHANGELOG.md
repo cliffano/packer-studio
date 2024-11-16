@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Added
+- Re-add /opt/poetry-venv/bin and /opt/poetry/bin: to PATH
+
 ## 2.6.0 - 2024-11-09
 ### Added
 - Re-add python3-venv

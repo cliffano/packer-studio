@@ -2,7 +2,7 @@
 set -o errexit
 set -o nounset
 
-export PATH=/usr/local/go/bin:/usr/local/maven/bin:/usr/local/node/bin:/usr/local/openjdk-jdk/bin:/root/.cargo/bin:$PATH
+export PATH=/opt/poetry-venv/bin:/opt/poetry/bin:/usr/local/go/bin:/usr/local/maven/bin:/usr/local/node/bin:/usr/local/openjdk-jdk/bin:/root/.cargo/bin:$PATH
 
 echo "****************************************"
 echo "* Provisioned software info - Pre"

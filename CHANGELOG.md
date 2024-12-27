@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Add pipx
+- Add /root/.local/bin to PATH for pipx-installed packages
 
 ### Changed
 - Upgrade Ubuntu to 24.04

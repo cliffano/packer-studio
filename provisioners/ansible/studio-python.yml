@@ -7,8 +7,7 @@
         pkg:
           - python3-venv
 
-    - community.general.pipx:
-      vars:
+    - vars:
         pipx_pkg:
           - awscli
           - virtualenv

@@ -7,9 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
-### Added
-- Add python3 installation, needed since Ubuntu 24.04
-
 ### Changed
 - Upgrade Ubuntu to 24.04
 

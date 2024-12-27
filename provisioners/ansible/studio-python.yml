@@ -7,7 +7,12 @@
         pkg:
           - python3-venv
 
-    - ansible.builtin.pip:
-        name:
+    - community.general.pipx:
+      vars:
+        pipx_pkg:
           - awscli
           - virtualenv
+      community.general.pipx:
+        name: "{{ item }}"
+        state: latest
+      with_items: "{{ pipx_pkg }}"

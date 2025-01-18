@@ -11,8 +11,11 @@
   tasks:
 
     - community.general.npm:
-        name: bob
+        name: "{{ item.name }}"
+        version: "{{ item.version }}"
         global: true
+      loop:
+        - { "name": "bob", "version": "3.1.0" }
 
     - name: Create symbolic link for easy access to node binaries on environments which override the PATH
       ansible.builtin.file:

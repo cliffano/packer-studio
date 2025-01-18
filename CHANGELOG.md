@@ -7,14 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Changed
+- Upgrade node.js to 23.5.0
+- Upgrade Bob to 3.1.0
+
 ## 2.8.0 - 2024-12-27
 ### Added
 - Add pipx
 - Add /root/.local/bin to PATH for pipx-installed packages
 
 ### Changed
-- Upgrade node.js to 22.13.0
-- Upgrade Bob to 3.1.0
 - Upgrade Ubuntu to 24.04
 - Replace ansible.builtin.pip with community.general.pipx
 

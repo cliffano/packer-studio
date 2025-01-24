@@ -43,3 +43,12 @@ Simply run a container using cliffano/studio image:
       -v /var/run/docker.sock:/var/run/docker.sock \
       -v $(pwd):/opt/workspace \
       -i -t cliffano/studio
+
+Development
+-----------
+
+Extra path should be added to the following:
+
+* provisioners/shell/info-pre.sh
+* provisioners/shell/info-post.sh
+* templates/packer/docker-studio.pkr.hcl

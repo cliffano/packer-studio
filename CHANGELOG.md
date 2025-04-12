@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Added
+- Add net-tools
+
 ## 2.9.0 - 2025-01-24
 ### Changed
 - Upgrade node.js to 23.5.0

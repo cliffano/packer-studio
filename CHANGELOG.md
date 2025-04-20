@@ -8,12 +8,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unreleased
 
 ## 2.11.0 - 2025-04-19
+### Added
+- Add .poetry/bin and .venv/bin to PATH of the baked image
 
 ## 2.10.0 - 2025-04-12
 ### Added
 - Add net-tools
 - Add telnet and vim versions info
-- Add .poetry/bin and .venv/bin to PATH of the baked image
 
 ## 2.9.0 - 2025-01-24
 ### Changed

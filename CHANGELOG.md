@@ -7,8 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
-### Removed
-- Removed .poetry/bin from PATH
+### Fixed
+- Reverted .poetry/bin from PATH
 
 ## 2.11.0 - 2025-04-19
 ### Added

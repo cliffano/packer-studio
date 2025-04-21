@@ -1,4 +1,4 @@
-version ?= 2.11.1
+version ?= 2.11.2-pre.0
 
 ci: clean stage deps lint build-docker-studio
 

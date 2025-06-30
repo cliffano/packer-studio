@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add Gemini CLI
 
+### Changed
+- Upgrade Bob to 4.0.0
+
 ## 2.12.0 - 2025-06-21
 ### Added
 - Re-add ImageMagick

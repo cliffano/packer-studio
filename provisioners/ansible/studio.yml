@@ -8,7 +8,6 @@
 
     - ansible.builtin.apt:
         pkg:
-          - imagemagick
           - jq
           - net-tools # for netstat et al
           - shellcheck

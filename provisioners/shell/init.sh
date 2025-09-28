@@ -9,7 +9,7 @@ export DEBIAN_FRONTEND="noninteractive"
 apt update
 apt autoremove
 apt autoclean
-apt install -y apt-utils build-essential gcc cpp gcc-multilib pkg-config software-properties-common locales
+apt install -y apt-utils build-essential curl gcc cpp gcc-multilib pkg-config software-properties-common locales
 rm -rf /var/lib/apt/lists/*
 locale-gen en_US.UTF-8
 update-locale LANG=en_US.UTF-8
@@ -37,7 +37,7 @@ brew doctor
 ################################################################
 apt update
 apt remove docker docker.io containerd runc
-DEBIAN_FRONTEND="noninteractive"  apt install -y ca-certificates curl gnupg lsb-release
+DEBIAN_FRONTEND="noninteractive"  apt install -y ca-certificates gnupg lsb-release
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
 apt update

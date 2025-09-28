@@ -24,6 +24,14 @@ apt install -y python3-pip pipx
 apt clean
 
 ################################################################
+# Install Homebrew, adapted from
+# https://www.digitalocean.com/community/tutorials/how-to-install-and-use-homebrew-on-linux
+################################################################
+curl -fsSL -o install.sh https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
+/bin/bash install.sh
+brew doctor
+
+################################################################
 # Install Docker, adapted from
 # https://docs.docker.com/engine/install/ubuntu/
 ################################################################

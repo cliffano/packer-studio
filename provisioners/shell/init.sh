@@ -5,6 +5,7 @@ set -o nounset
 ################################################################
 # Common OS setup
 ################################################################
+echo "Provisioning Common OS setup..."
 export DEBIAN_FRONTEND="noninteractive"
 apt update
 apt autoremove
@@ -18,6 +19,7 @@ apt clean
 ################################################################
 # Install Ansible and Python utilities
 ################################################################
+echo "Provisioning Ansible..."
 add-apt-repository --yes --update ppa:ansible/ansible
 apt install -y ansible python3-pip pipx
 apt clean
@@ -35,6 +37,7 @@ brew doctor
 # Install Docker, adapted from
 # https://docs.docker.com/engine/install/ubuntu/
 ################################################################
+echo "Provisioning Docker..."
 apt update
 apt remove docker docker.io containerd runc
 DEBIAN_FRONTEND="noninteractive"  apt install -y ca-certificates curl gnupg lsb-release
@@ -48,6 +51,7 @@ apt clean
 # Install GH CLI, adapted from
 # https://github.com/cli/cli/blob/trunk/docs/install_linux.md
 ################################################################
+echo "Provisioning GitHub CLI..."
 (type -p wget >/dev/null || (apt update && apt install wget -y)) \
 && mkdir -p -m 755 /etc/apt/keyrings \
 && wget -qO- https://cli.github.com/packages/githubcli-archive-keyring.gpg | tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null \

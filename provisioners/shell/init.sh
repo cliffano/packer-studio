@@ -29,6 +29,7 @@ apt clean
 ################################################################
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 /bin/bash install.sh
+brew install git
 brew doctor
 
 ################################################################

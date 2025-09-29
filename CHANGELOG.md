@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add Homebrew
 
+### Changed
+- Change checkmake GitHub ID from mrtazz to checkmake
+
 ## 2.13.0 - 2025-07-06
 ### Added
 - Add Gemini CLI

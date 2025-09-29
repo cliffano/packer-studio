@@ -19,17 +19,15 @@ apt clean
 # Install Ansible and Python utilities
 ################################################################
 add-apt-repository --yes --update ppa:ansible/ansible
-apt install -y ansible
-apt install -y python3-pip pipx
+apt install -y ansible python3-pip pipx
 apt clean
 
 ################################################################
 # Install Homebrew, adapted from
 # https://www.digitalocean.com/community/tutorials/how-to-install-and-use-homebrew-on-linux
 ################################################################
-echo $PATH
-which git
-echo "Installing Brew..."
+echo "Provisioning Homebrew..."
+apt install -y curl git
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew doctor
 

@@ -28,8 +28,10 @@ apt clean
 # https://www.digitalocean.com/community/tutorials/how-to-install-and-use-homebrew-on-linux
 ################################################################
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-/bin/bash install.sh
-brew install git
+echo $PATH
+which git
+echo "Installing Brew..."
+./install.sh
 brew doctor
 
 ################################################################

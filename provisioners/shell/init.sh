@@ -29,8 +29,12 @@ apt clean
 # https://www.digitalocean.com/community/tutorials/how-to-install-and-use-homebrew-on-linux
 ################################################################
 echo "Provisioning Homebrew..."
-apt install -y curl git
+apt install -y curl git build-essential
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+echo >> /root/.bashrc
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /root/.bashrc
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+brew install gcc
 brew doctor
 
 ################################################################

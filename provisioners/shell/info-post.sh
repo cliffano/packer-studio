@@ -2,7 +2,7 @@
 set -o errexit
 set -o nounset
 
-export PATH=/root/.cargo/bin:/root/.local/bin:/root/go/bin:/opt/poetry-venv/bin:/opt/poetry/bin:/usr/local/go/bin:/usr/local/maven/bin:/usr/local/node/bin:/usr/local/openjdk-jdk/bin:$PATH
+export PATH=/home/linuxbrew/.linuxbrew/bin/:/root/.cargo/bin:/root/.local/bin:/root/go/bin:/opt/poetry-venv/bin:/opt/poetry/bin:/usr/local/go/bin:/usr/local/maven/bin:/usr/local/node/bin:/usr/local/openjdk-jdk/bin:$PATH
 
 echo "****************************************"
 echo "* Provisioned software info - Post"
@@ -12,6 +12,7 @@ echo "aws version: $(aws --version)"
 echo "bob version: $(bob --version)"
 echo "brew version: $(brew --version)"
 echo "checkmake version: $(checkmake --version)"
+echo "cyclonedx version: $(cyclonedx --version)"
 echo "gem version: $(gem --version)"
 echo "gemini version: $(gemini --version)"
 echo "java version: $(java --version)"

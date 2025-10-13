@@ -15,7 +15,7 @@
           - vim
           - zip
 
-    - ansible.builtin.command: brew install cyclonedx/cyclonedx/cyclonedx-cli
+    - ansible.builtin.command: /home/linuxbrew/.linuxbrew/bin/brew install cyclonedx/cyclonedx/cyclonedx-cli
 
     - ansible.builtin.file:
         path: /root/.local/bin

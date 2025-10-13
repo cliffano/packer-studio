@@ -30,7 +30,7 @@ apt clean
 ################################################################
 echo "Provisioning Homebrew..."
 apt install -y curl git build-essential
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 echo >> /root/.bashrc
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /root/.bashrc
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

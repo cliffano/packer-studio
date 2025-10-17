@@ -2,6 +2,8 @@
 set -o errexit
 set -o nounset
 
+export PATH=/root/.cargo/bin:/root/.local/bin:/root/go/bin:/opt/poetry-venv/bin:/opt/poetry/bin:/usr/local/go/bin:/usr/local/maven/bin:/usr/local/node/bin:/usr/local/openjdk-jdk/bin:/var/homebrew/linked/cyclonedx-cli/bin/:/home/linuxbrew/.linuxbrew/bin:$PATH
+
 ################################################################
 # Common OS setup
 ################################################################
@@ -32,8 +34,8 @@ echo "Provisioning Homebrew..."
 apt install -y curl git build-essential
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 echo >> /root/.bashrc
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /root/.bashrc
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+echo 'eval "$(brew shellenv)"' >> /root/.bashrc
+eval "$(brew shellenv)"
 brew install gcc
 brew doctor
 

@@ -48,21 +48,21 @@ build {
       "mkdir -p /tmp"
     ]
     environment_vars = [
-      "ENV_PATH=${local.path}"
+      "ENV_PATH=${local.env_path}"
     ]
   }
 
   provisioner "shell" {
     script = "provisioners/shell/init.sh"
     environment_vars = [
-      "ENV_PATH=${local.path}"
+      "ENV_PATH=${local.env_path}"
     ]
   }
 
   provisioner "shell" {
     script = "provisioners/shell/info-pre.sh"
     environment_vars = [
-      "ENV_PATH=${local.path}"
+      "ENV_PATH=${local.env_path}"
     ]
   }
 
@@ -88,7 +88,7 @@ build {
     ]
     extra_arguments = [
       "--extra-vars",
-      "\"env_path=${local.path}\""
+      "\"env_path=${local.env_path}\""
     ]
   }
 

@@ -32,7 +32,7 @@ source "docker" "studio" {
   ]
   changes = [
     "ENV LANG en_US.UTF-8",
-    "ENV PATH {{ local.env_path }}"
+    "ENV PATH ${local.path}"
   ]
 }
 
@@ -48,21 +48,21 @@ build {
       "mkdir -p /tmp"
     ]
     environment_vars = [
-      "ENV_PATH={{ local.env_path }}"
+      "ENV_PATH=${local.path}"
     ]
   }
 
   provisioner "shell" {
     script = "provisioners/shell/init.sh"
     environment_vars = [
-      "ENV_PATH={{ local.env_path }}"
+      "ENV_PATH=${local.path}"
     ]
   }
 
   provisioner "shell" {
     script = "provisioners/shell/info-pre.sh"
     environment_vars = [
-      "ENV_PATH={{ local.env_path }}"
+      "ENV_PATH=${local.path}"
     ]
   }
 
@@ -88,7 +88,7 @@ build {
     ]
     extra_arguments = [
       "--extra-vars",
-      "\"env_path={{ local.env_path }}\""
+      "\"env_path=${local.path}\""
     ]
   }
 

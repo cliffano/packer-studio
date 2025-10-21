@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Changed
+- Extract environment path to a single local var and is distributed via Packer template
+
 ## 2.15.0 - 2025-10-17
 ### Added
 - Add hcledit

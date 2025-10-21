@@ -16,6 +16,10 @@ variable "version" {
   default = "x.x.x"
 }
 
+locals {
+  env_path = "/root/.cargo/bin:/root/.local/bin:/root/go/bin:.venv/bin:/opt/poetry-venv/bin:/opt/poetry/bin:/usr/local/go/bin:/usr/local/maven/bin:/usr/local/node/bin:/usr/local/openjdk-jdk/bin:/var/homebrew/linked/cyclonedx-cli/bin/:/home/linuxbrew/.linuxbrew/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
+}
+
 source "docker" "studio" {
   image  = "ubuntu:24.04"
   commit = true
@@ -28,7 +32,7 @@ source "docker" "studio" {
   ]
   changes = [
     "ENV LANG en_US.UTF-8",
-    "ENV PATH /root/.cargo/bin:/root/.local/bin:/root/go/bin:.venv/bin:/opt/poetry-venv/bin:/opt/poetry/bin:/usr/local/go/bin:/usr/local/maven/bin:/usr/local/node/bin:/usr/local/openjdk-jdk/bin:/var/homebrew/linked/cyclonedx-cli/bin/:/home/linuxbrew/.linuxbrew/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
+    "ENV PATH {{ local.env_path }}"
   ]
 }
 
@@ -43,14 +47,23 @@ build {
     inline = [
       "mkdir -p /tmp"
     ]
+    environment_vars = [
+      "ENV_PATH={{ local.env_path }}"
+    ]
   }
 
   provisioner "shell" {
     script = "provisioners/shell/init.sh"
+    environment_vars = [
+      "ENV_PATH={{ local.env_path }}"
+    ]
   }
 
   provisioner "shell" {
     script = "provisioners/shell/info-pre.sh"
+    environment_vars = [
+      "ENV_PATH={{ local.env_path }}"
+    ]
   }
 
   provisioner "ansible-local" {
@@ -72,6 +85,10 @@ build {
     ]
     collection_paths = [
       "stage/ansible/collections"
+    ]
+    extra_arguments = [
+      "--extra-vars",
+      "\"env_path={{ local.env_path }}\""
     ]
   }
 

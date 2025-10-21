@@ -32,7 +32,7 @@ source "docker" "studio" {
   ]
   changes = [
     "ENV LANG en_US.UTF-8",
-    "ENV PATH ${local.path}"
+    "ENV PATH ${local.env_path}"
   ]
 }
 

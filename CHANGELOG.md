@@ -15,6 +15,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Upgrade trivy to 0.60.0
 - Upgrade node to 24.8.0
 
+### Fixed
+- Fix hcledit version command in info-post
+
 ## 2.15.0 - 2025-10-17
 ### Added
 - Add hcledit

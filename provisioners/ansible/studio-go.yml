@@ -25,4 +25,4 @@
     - ansible.builtin.command: go install github.com/checkmake/checkmake/cmd/checkmake@latest
     - ansible.builtin.shell: brew install minamijoyo/hcledit/hcledit
       environment:
-        PATH: "{{ var.env_path }}:{{ ansible_env.PATH }}"
+        PATH: "{{ env_path }}:{{ ansible_env.PATH }}"

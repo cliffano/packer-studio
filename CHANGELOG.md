@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Extract environment path to a single local var and is distributed via Packer template
+- Upgrade Packer to 1.14.2
+- Upgrade Terraform to 1.13.4
+- Upgrade tflint to v0.56.0
+- Upgrade trivy to 0.60.0
+- Upgrade node to 24.8.0
 
 ## 2.15.0 - 2025-10-17
 ### Added

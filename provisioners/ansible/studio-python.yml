@@ -7,11 +7,9 @@
         pkg:
           - python3-venv
 
-    - vars:
-        pipx_pkg:
-          - awscli
-          - virtualenv
-      community.general.pipx:
+    - community.general.pipx:
         name: "{{ item }}"
         state: latest
-      with_items: "{{ pipx_pkg }}"
+      with_items:
+        - awscli
+        - virtualenv

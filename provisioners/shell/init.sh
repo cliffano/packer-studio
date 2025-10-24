@@ -23,8 +23,10 @@ apt clean
 ################################################################
 echo "Provisioning Ansible..."
 add-apt-repository --yes --update ppa:ansible/ansible
-apt install -y ansible python3-pip pipx
+apt install -y ansible python3-pip
 apt clean
+python3 -m pip install --user pipx
+python3 -m pipx ensurepath
 
 ################################################################
 # Install Homebrew, adapted from

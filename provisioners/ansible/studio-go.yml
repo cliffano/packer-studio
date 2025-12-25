@@ -22,7 +22,7 @@
 
   tasks:
 
-    - ansible.builtin.command: go install github.com/checkmake/checkmake/cmd/checkmake@latest
+    - ansible.builtin.command: go install github.com/mrtazz/checkmake/cmd/checkmake@latest
     - ansible.builtin.shell: brew install minamijoyo/hcledit/hcledit
       environment:
         PATH: "{{ env_path }}:{{ ansible_env.PATH }}"

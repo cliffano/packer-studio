@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Change pipx installation to use pip due to outdated pipx via Ubuntu
+- Revert checkmake GitHub ID back to mrtazz from checkmake
 
 ## 2.16.0 - 2025-10-23
 ### Changed

@@ -6,9 +6,9 @@
     go_ver: 1.23.0
     hashi_apps:
       - name: packer
-        ver: 1.14.2
+        ver: 1.14.3
       - name: terraform
-        ver: 1.13.4
+        ver: 1.14.3
     # Available versions: https://github.com/andrewrothstein/ansible-tflint/blob/main/defaults/main.yml
     tflint_ver: v0.56.0
     # Available versions: https://github.com/andrewrothstein/ansible-trivy/blob/main/defaults/main.yml

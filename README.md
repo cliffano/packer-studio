@@ -22,7 +22,7 @@ Or alternatively, you can create the Docker image:
 
     git clone https://github.com/cliffano/packer-studio
     cd packer-studio
-    make docker
+    make build-docker-studio
 
 An image with `cliffano/studio` repository and `latest` tag should show up:
 

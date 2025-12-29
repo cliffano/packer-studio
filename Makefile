@@ -9,8 +9,8 @@ stage:
 	mkdir -p stage/ stage/ansible/roles/ stage/ansible/collections/
 
 deps:
-	packer plugins install github.com/hashicorp/docker 1.0.10
-	packer plugins install github.com/hashicorp/ansible 1.1.1
+	packer plugins install github.com/hashicorp/docker 1.1.2
+	packer plugins install github.com/hashicorp/ansible 1.1.4
 
 lint:
 	echo "TODO: Ansible Lint"
@@ -35,7 +35,4 @@ publish-docker-studio:
 	docker image push cliffano/studio:latest
 	docker image push cliffano/studio:$(version)
 
-release:
-	rtk release
-
-.PHONY: ci clean deps lint build-aws-studio build-docker-studio publish-docker-studio release
+.PHONY: ci clean deps lint build-aws-studio build-docker-studio publish-docker-studio

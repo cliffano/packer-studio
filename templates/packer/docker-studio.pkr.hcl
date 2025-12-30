@@ -144,13 +144,6 @@ build {
     ]
   }
 
-  provisioner "shell-local" {
-    script = "provisioners/shell/clean.sh"
-    environment_vars = [
-      "ENV_PATH=${local.env_path}"
-    ]
-  }
-
   post-processor "docker-tag" {
     repository = "cliffano/studio"
     tags        = [

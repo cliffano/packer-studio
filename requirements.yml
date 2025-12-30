@@ -5,7 +5,6 @@ roles:
   - name: andrewrothstein.maven
   - name: andrewrothstein.node
   - name: andrewrothstein.ruby
-  - name: andrewrothstein.rust
   - name: andrewrothstein.tflint
   - name: andrewrothstein.trivy
 

@@ -5,7 +5,7 @@ packer {
       source  = "github.com/hashicorp/docker"
     }
     ansible = {
-      version = ">= 1.1.1"
+      version = ">= 1.1.4"
       source  = "github.com/hashicorp/ansible"
     }
   }
@@ -139,6 +139,13 @@ build {
 
   provisioner "shell" {
     script = "provisioners/shell/info-post.sh"
+    environment_vars = [
+      "ENV_PATH=${local.env_path}"
+    ]
+  }
+
+  provisioner "shell-local" {
+    script = "provisioners/shell/clean.sh"
     environment_vars = [
       "ENV_PATH=${local.env_path}"
     ]

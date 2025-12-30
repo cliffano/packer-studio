@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Added
+- Add Ansible lint validation
+
 ### Changed
 - Change pipx installation to use pip due to outdated pipx via Ubuntu
 - Revert checkmake GitHub ID back to mrtazz from checkmake

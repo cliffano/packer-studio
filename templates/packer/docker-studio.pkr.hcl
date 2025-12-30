@@ -21,7 +21,7 @@ locals {
 }
 
 source "docker" "studio" {
-  image  = "ubuntu:24.04"
+  image  = "cliffano/base:0.10.0"
   commit = true
   run_command = [
     "-d",
@@ -46,13 +46,6 @@ build {
   provisioner "shell" {
     inline = [
       "mkdir -p /tmp"
-    ]
-  }
-
-  provisioner "shell" {
-    script = "provisioners/shell/init.sh"
-    environment_vars = [
-      "ENV_PATH=${local.env_path}"
     ]
   }
 

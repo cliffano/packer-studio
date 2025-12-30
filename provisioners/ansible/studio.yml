@@ -1,21 +1,7 @@
 ---
 - hosts: localhost
 
-  roles:
-    - andrewrothstein.yq
-
   tasks:
-
-    - ansible.builtin.apt:
-        pkg:
-          - jq
-          - net-tools # for netstat et al
-          - shellcheck
-          - telnet
-          - vim
-          - zip
-
-    - ansible.builtin.command: /home/linuxbrew/.linuxbrew/bin/brew install cyclonedx/cyclonedx/cyclonedx-cli
 
     - ansible.builtin.file:
         path: /root/.local/bin

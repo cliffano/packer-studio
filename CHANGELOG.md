@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add Ansible lint validation
 
 ### Changed
+- Switch source image to cliffano/base
 - Change pipx installation to use pip due to outdated pipx via Ubuntu
 - Revert checkmake GitHub ID back to mrtazz from checkmake
 - Upgrade Terraform to 1.14.3

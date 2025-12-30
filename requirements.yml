@@ -7,7 +7,6 @@ roles:
   - name: andrewrothstein.rust
   - name: andrewrothstein.tflint
   - name: andrewrothstein.trivy
-  - name: andrewrothstein.yq
 
 collections:
   - name: community.general

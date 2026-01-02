@@ -1,6 +1,6 @@
 ---
 - hosts: localhost
-
+  
   tasks:
 
     - ansible.builtin.apt:
@@ -11,5 +11,15 @@
         name: "{{ item }}"
         state: latest
       with_items:
-        - awscli
         - virtualenv
+
+    - ansible.builtin.get_url:
+        url: "https://awscli.amazonaws.com/awscli-exe-linux-{{ ansible_architecture }}.zip"
+        dest: /tmp/awscliv2.zip
+
+    - ansible.builtin.unarchive:
+        src: /tmp/awscliv2.zip
+        dest: /tmp
+        remote_src: true
+
+    - ansible.builtin.command: /tmp/aws/install --update

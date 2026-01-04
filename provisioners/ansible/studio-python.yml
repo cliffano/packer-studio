@@ -1,6 +1,6 @@
 ---
 - hosts: localhost
-  
+
   tasks:
 
     - ansible.builtin.apt:

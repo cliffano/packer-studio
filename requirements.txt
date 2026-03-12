@@ -16,7 +16,7 @@ attrs==25.4.0
     # via
     #   jsonschema
     #   referencing
-black==25.12.0
+black==26.3.1
     # via ansible-lint
 bracex==2.6
     # via wcmatch
@@ -52,7 +52,7 @@ packaging==25.0
     #   ansible-core
     #   ansible-lint
     #   black
-pathspec==0.12.1
+pathspec==1.0.4
     # via
     #   ansible-lint
     #   black
@@ -61,7 +61,7 @@ platformdirs==4.5.1
     # via black
 pycparser==2.23
     # via cffi
-pytokens==0.3.0
+pytokens==0.4.1
     # via black
 pyyaml==6.0.3
     # via

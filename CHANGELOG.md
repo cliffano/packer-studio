@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Changed
+- Upgrade Terraform to 1.14.5
+- Upgrade Packer to 1.15.0
+
 ## 3.1.0 - 2026-01-04
 ### Changed
 - Upgrade AWS CLI to v2

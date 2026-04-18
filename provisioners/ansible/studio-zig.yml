@@ -3,19 +3,19 @@
 
   vars:
     # Available versions: https://github.com/ziglang/zig/releases
-    zig_ver: 0.15.1
+    zig_ver: 0.16.0
 
   tasks:
 
     - name: Download and extract Zig binaries
       ansible.builtin.unarchive:
-        src: https://ziglang.org/download/{{ zig_ver }}/zig-linux-x86_64-{{ zig_ver }}.tar.xz
+        src: https://ziglang.org/download/{{ zig_ver }}/zig-x86_64-linux-{{ zig_ver }}.tar.xz
         dest: /usr/local/
         remote_src: yes
         extra_opts: [--strip-components=0]
 
     - name: Create symbolic link for Zig
       ansible.builtin.file:
-        src: /usr/local/zig-linux-x86_64-{{ zig_ver }}/zig
+        src: /usr/local/zig-x86_64-linux-{{ zig_ver }}/zig
         dest: /usr/local/bin/zig
         state: link

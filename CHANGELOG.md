@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Added
+- Add ziglang provisioning
+
 ### Changed
 - Upgrade Terraform to 1.14.5
 - Upgrade Packer to 1.15.0

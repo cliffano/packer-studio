@@ -126,6 +126,17 @@ build {
     ]
   }
 
+  provisioner "ansible-local" {
+    playbook_file = "provisioners/ansible/studio-zig.yml"
+    galaxy_file = "requirements.yml"
+    role_paths = [
+      "stage/ansible/roles"
+    ]
+    collection_paths = [
+      "stage/ansible/collections"
+    ]
+  }
+
   provisioner "shell" {
     script = "provisioners/shell/info-post.sh"
     environment_vars = [

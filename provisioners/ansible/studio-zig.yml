@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+
+  tasks:
+
+    - community.general.snap:
+        name: zig
+        classic: true
+        state: present

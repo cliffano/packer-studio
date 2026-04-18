@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Upgrade Terraform to 1.14.5
 - Upgrade Packer to 1.15.0
 - Upgrade trivy to 0.69.3
+- Change checkmake GitHub ID again from mrtazz to checkmake
 
 ## 3.1.0 - 2026-01-04
 ### Changed

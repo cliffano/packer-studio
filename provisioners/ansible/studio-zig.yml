@@ -1,9 +1,21 @@
 ---
 - hosts: localhost
 
+  vars:
+    # Available versions: https://github.com/ziglang/zig/releases
+    zig_ver: 0.15.1
+
   tasks:
 
-    - community.general.snap:
-        name: zig
-        classic: true
-        state: present
+    - name: Download and extract Zig binaries
+      ansible.builtin.unarchive:
+        src: https://ziglang.org/download/{{ zig_ver }}/zig-linux-x86_64-{{ zig_ver }}.tar.xz
+        dest: /usr/local/
+        remote_src: yes
+        extra_opts: [--strip-components=0]
+
+    - name: Create symbolic link for Zig
+      ansible.builtin.file:
+        src: /usr/local/zig-linux-x86_64-{{ zig_ver }}/zig
+        dest: /usr/local/bin/zig
+        state: link

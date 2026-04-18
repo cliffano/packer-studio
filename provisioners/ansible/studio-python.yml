@@ -4,8 +4,10 @@
   tasks:
 
     - ansible.builtin.apt:
-        pkg:
-          - python3-venv
+        update_cache: true
+        name: python3-venv
+        state: present
+        force_apt_get: true
 
     - community.general.pipx:
         name: "{{ item }}"

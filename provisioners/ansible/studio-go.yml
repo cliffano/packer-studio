@@ -12,7 +12,7 @@
     # Available versions: https://github.com/andrewrothstein/ansible-tflint/blob/main/defaults/main.yml
     tflint_ver: v0.56.0
     # Available versions: https://github.com/andrewrothstein/ansible-trivy/blob/main/defaults/main.yml
-    trivy_ver: 0.60.0
+    trivy_ver: 0.69.3
 
   roles:
     - andrewrothstein.go

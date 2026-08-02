@@ -14,32 +14,40 @@ This image is used to launch a container for me to code in Go, Java, JavaScript,
 
 Pull Studio Docker image from Docker Hub:
 
-    docker pull cliffano/studio
+```shell
+docker pull cliffano/studio
+```
 
 Or alternatively, you can create the Docker image:
 
-    git clone https://github.com/cliffano/packer-studio
-    cd packer-studio
-    make build-docker-studio
+```shell
+git clone https://github.com/cliffano/packer-studio
+cd packer-studio
+make build-docker-studio
+```
 
 An image with `cliffano/studio` repository and `latest` tag should show up:
 
-    haku> docker images
+```text
+haku> docker images
 
-    REPOSITORY                                       TAG                 IMAGE ID            CREATED             SIZE
-    cliffano/studio                                  latest              3f45c1bc0e76        5 hours ago         1.5GB
-    ubuntu                                           latest              735f80812f90        2 weeks ago         83.5MB
+REPOSITORY                                       TAG                 IMAGE ID            CREATED             SIZE
+cliffano/studio                                  latest              3f45c1bc0e76        5 hours ago         1.5GB
+ubuntu                                           latest              735f80812f90        2 weeks ago         83.5MB
+```
 
 ## Usage
 
 Simply run a container using cliffano/studio image:
 
-    docker run \
-      --rm \
-      --workdir /opt/workspace \
-      -v /var/run/docker.sock:/var/run/docker.sock \
-      -v $(pwd):/opt/workspace \
-      -i -t cliffano/studio
+```javascript
+docker run \
+  --rm \
+  --workdir /opt/workspace \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v $(pwd):/opt/workspace \
+  -i -t cliffano/studio
+```
 
 ## Development
 

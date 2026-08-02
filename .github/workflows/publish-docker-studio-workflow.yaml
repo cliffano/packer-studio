@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
         with:
-          ref: main
+          ref: 3.4.0
       - uses: ./.github/actions/publish-docker-studio-action
         env:
           DOCKERHUB_TOKEN: ${{ secrets.STUDIO_DOCKERHUB_TOKEN }}

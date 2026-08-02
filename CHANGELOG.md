@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Added
+- Re-add Rust provisioning
+
 ## 3.2.0 - 2026-04-18
 ### Added
 - Add ziglang provisioning
@@ -31,6 +34,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Revert checkmake GitHub ID back to mrtazz from checkmake
 - Upgrade Terraform to 1.14.3
 - Upgrade Packer to 1.14.3
+
+### Removed
+- Remove Rust
 
 ## 2.16.0 - 2025-10-23
 ### Changed

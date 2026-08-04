@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Fixed
+- Fix incorrect command having whitespace prefix
+
 ## 3.5.0 - 2026-08-04
 ### Changed
 - Move publish action entrypoint to command-docker-action

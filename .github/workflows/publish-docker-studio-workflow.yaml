@@ -10,16 +10,14 @@ jobs:
     steps:
       - uses: actions/checkout@v7
         with:
-          ref: main
+          ref: 3.5.0
       - uses: cliffano/command-docker-action@v2.0.0
         with:
           image: cliffano/studio:3.2.0
           shell: bash
           command: >
-            docker --version && \
-            make clean stage deps lint build-docker-studio && \
-            cat logs/packer-docker-studio.log && \
-            echo "${{ secrets.STUDIO_DOCKERHUB_TOKEN }}" | docker login --username cliffano --password-stdin && \
-            docker info  && \
-            docker inspect cliffano/studio && \
-            make publish-docker-studio
+            docker --version && \ make clean stage deps lint build-docker-studio
+            && \ cat logs/packer-docker-studio.log && \ echo "${{
+            secrets.STUDIO_DOCKERHUB_TOKEN }}" | docker login --username
+            cliffano --password-stdin && \ docker info  && \ docker inspect
+            cliffano/studio && \ make publish-docker-studio

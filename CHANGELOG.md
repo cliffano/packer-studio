@@ -6,6 +6,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Changed
+- Swap publishing to push version prior to latest
+- Upgrade Go to 1.26.0
+- Upgrade Packer to 1.16.0
+- Upgrade Terraform to 1.15.8
+- Upgrade TFLint to 0.63.1
+- Upgrade Trivy to 0.72.0
+- Upgrade node to 24.14.0
+- Upgrade Bob to 5.3.0
+
+### Fixed
+- Fix Zig version to 0.15.2
+
+### Removed
+- Remove Gemini CLI
+
 ## 3.6.0 - 2026-08-04
 ### Changed
 - Move Docker login to a workflow step

@@ -3,16 +3,16 @@
 
   vars:
     env_path: ''
-    go_ver: 1.23.0
+    go_ver: 1.26.0
     hashi_apps:
       - name: packer
-        ver: 1.15.0
+        ver: 1.16.0
       - name: terraform
-        ver: 1.14.5
+        ver: 1.15.8
     # Available versions: https://github.com/andrewrothstein/ansible-tflint/blob/main/defaults/main.yml
-    tflint_ver: v0.56.0
+    tflint_ver: v0.63.1
     # Available versions: https://github.com/andrewrothstein/ansible-trivy/blob/main/defaults/main.yml
-    trivy_ver: 0.69.3
+    trivy_ver: 0.72.0
 
   roles:
     - andrewrothstein.go

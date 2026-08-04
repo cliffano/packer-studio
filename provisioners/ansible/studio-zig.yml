@@ -3,7 +3,7 @@
 
   vars:
     # Available versions: https://github.com/ziglang/zig/releases
-    zig_ver: 0.16.0
+    zig_ver: 0.15.2
 
   tasks:
 

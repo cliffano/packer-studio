@@ -3,7 +3,7 @@
 
   vars:
     # Available versions: https://github.com/andrewrothstein/ansible-node/blob/main/defaults/main.yml
-    node_ver: 24.8.0
+    node_ver: 24.14.0
 
   roles:
     - andrewrothstein.node
@@ -15,8 +15,7 @@
         version: "{{ item.version }}"
         global: true
       loop:
-        - { "name": "bob", "version": "4.0.0" }
-        - { "name": "@google/gemini-cli", "version": "0.1.4" }
+        - { "name": "bob", "version": "5.3.0" }
 
     - name: Create symbolic link for easy access to node binaries on environments which override the PATH
       ansible.builtin.file:

@@ -2,6 +2,7 @@
 - hosts: localhost
 
   vars:
+    # Available versions: https://github.com/andrewrothstein/ansible-maven/blob/main/defaults/main.yml
     maven_ver:
       major: 3
       minor: 9

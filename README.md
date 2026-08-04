@@ -6,9 +6,9 @@
 
 # Packer Studio
 
-Packer Studio is a Packer builder of Docker image which contains the tech stacks that I use the most.
+Packer Studio is a Packer builder of Docker image which contains the tech stacks used by Studio Cliffano projects.
 
-This image is used to launch a container for me to code in Go, Java, JavaScript, Python, Ruby, and Rust.
+This image is used to launch a container for developing code in Go, Java, JavaScript, Python, Ruby, Rust, and Zig.
 
 ## Installation
 

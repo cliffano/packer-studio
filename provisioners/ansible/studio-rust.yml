@@ -1,5 +1,6 @@
 ---
-- hosts: localhost
+- name: Provision Rust tools and libraries
+  hosts: localhost
 
   roles:
     - andrewrothstein.rust

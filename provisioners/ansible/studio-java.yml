@@ -1,5 +1,6 @@
 ---
-- hosts: localhost
+- name: Provision Java tools and libraries
+  hosts: localhost
 
   vars:
     # Available versions: https://github.com/andrewrothstein/ansible-maven/blob/main/defaults/main.yml

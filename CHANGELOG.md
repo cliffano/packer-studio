@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Changed
+- Move publish action entrypoint to command-docker-action
+
 ## 3.4.0 - 2026-08-02
 ### Changed
 - Switch Docker Hub token

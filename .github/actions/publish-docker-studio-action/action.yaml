@@ -1,5 +1,0 @@
----
-name: 'Publish Docker Studio'
-runs:
-  using: 'docker'
-  image: 'Dockerfile'

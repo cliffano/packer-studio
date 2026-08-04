@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Changed
+- Move Docker login to a workflow step
+
 ## 3.5.1 - 2026-08-04
 ### Fixed
 - Fix incorrect command having whitespace prefix

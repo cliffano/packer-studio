@@ -42,7 +42,7 @@ build-docker-studio:
 		templates/packer/docker-studio.pkr.hcl
 
 publish-docker-studio:
-	docker image push cliffano/studio:latest
 	docker image push cliffano/studio:$(version)
+	docker image push cliffano/studio:latest
 
 .PHONY: ci clean rmdeps deps deps-upgrade lint build-aws-studio build-docker-studio publish-docker-studio

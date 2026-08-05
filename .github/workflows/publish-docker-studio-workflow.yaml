@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
         with:
-          ref: main
+          ref: 3.8.0
       - uses: docker/login-action@v4
         with:
           username: cliffano
@@ -20,15 +20,10 @@ jobs:
           image: cliffano/studio:3.2.0
           shell: bash
           extra_args: '-v ~/.docker/config.json:/root/.docker/config.json:ro'
-          command: >
+          command: |
             make deps clean stage lint build-docker-studio &&
-
             cat logs/packer-docker-studio.log &&
-
             docker --version &&
-
             docker info  &&
-
             docker inspect cliffano/studio &&
-
             make publish-docker-studio

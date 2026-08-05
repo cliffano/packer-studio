@@ -21,7 +21,7 @@ jobs:
           shell: bash
           extra_args: '-v ~/.docker/config.json:/root/.docker/config.json:ro'
           command: >
-            make clean stage deps lint build-docker-studio &&
+            make deps clean stage lint build-docker-studio &&
 
             cat logs/packer-docker-studio.log &&
 

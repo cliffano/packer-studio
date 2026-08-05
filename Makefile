@@ -1,6 +1,6 @@
 version ?= 3.7.1-pre.0
 
-ci: clean stage deps lint build-docker-studio
+ci: clean stage lint build-docker-studio
 
 clean:
 	rm -rf stage/ logs/ /tmp/packer-tmp/

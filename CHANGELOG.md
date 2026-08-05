@@ -8,8 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Upgrade source to Base 1.1.0
-- Upgrade min Docker Packer Plugin to 1.1.4
-- Upgrade min Ansible Packer Plugin to 1.1.6
+- Upgrade Docker Packer Plugin to 1.1.4
+- Upgrade Ansible Packer Plugin to 1.1.6
 
 ## 3.7.0 - 2026-08-04
 ### Changed

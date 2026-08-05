@@ -21,7 +21,7 @@ locals {
 }
 
 source "docker" "studio" {
-  image  = "cliffano/base:1.0.0"
+  image  = "cliffano/base:1.1.0"
   commit = true
   run_command = [
     "-d",

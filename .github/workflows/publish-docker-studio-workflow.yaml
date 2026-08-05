@@ -21,6 +21,14 @@ jobs:
           shell: bash
           extra_args: '-v ~/.docker/config.json:/root/.docker/config.json:ro'
           command: >
-            make clean stage deps lint build-docker-studio && cat
-            logs/packer-docker-studio.log && docker --version && docker info  &&
-            docker inspect cliffano/studio && make publish-docker-studio
+            make clean stage deps lint build-docker-studio &&
+            
+            cat logs/packer-docker-studio.log &&
+            
+            docker --version &&
+            
+            docker info  &&
+            
+            docker inspect cliffano/studio &&
+            
+            make publish-docker-studio

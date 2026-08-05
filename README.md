@@ -1,8 +1,12 @@
+<!-- BEGIN:AVATAR -->
 ![Avatar](avatar.jpg)
+<!-- END:AVATAR -->
 
+<!-- BEGIN:BADGES -->
 [![Build Status](https://github.com/cliffano/packer-studio/workflows/CI/badge.svg)](https://github.com/cliffano/packer-studio/actions?query=workflow%3ACI)
 [![Docker Pulls Count](https://img.shields.io/docker/pulls/cliffano/studio.svg)](https://hub.docker.com/r/cliffano/studio/)
 [![Security Status](https://snyk.io/test/github/cliffano/packer-studio/badge.svg)](https://snyk.io/test/github/cliffano/packer-studio)
+<!-- END:BADGES -->
 
 # Packer Studio
 
@@ -56,3 +60,9 @@ Extra path should be added to the following:
 * provisioners/shell/info-pre.sh
 * provisioners/shell/info-post.sh
 * templates/packer/docker-studio.pkr.hcl
+
+## Colophon
+
+<!-- BEGIN:DEVELOPERS_GUIDE -->
+[Developer's Guide](https://cliffano.github.io/developers-guide-packer.html)
+<!-- END:DEVELOPERS_GUIDE -->

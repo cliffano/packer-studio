@@ -23,9 +23,8 @@ jobs:
           username: cliffano
           password: ${{ secrets.STUDIO_DOCKERHUB_TOKEN }}
       - uses: cliffano/command-docker-action@v2.1.0
-        if: matrix.arch == 'amd64'
         with:
-          image: cliffano/studio:3.2.0
+          image: cliffano/studio:4.0.0
           shell: bash
           extra_args: '-v ~/.docker/config.json:/root/.docker/config.json:ro'
           command: >
@@ -41,18 +40,6 @@ jobs:
             docker inspect cliffano/studio &&
 
             make publish-docker-studio arch=${{ matrix.arch }}
-      - uses: hashicorp/setup-packer@v3
-        if: matrix.arch == 'arm64'
-        with:
-          version: 1.16.0
-      - if: matrix.arch == 'arm64'
-        run: |
-          make deps clean stage lint build-docker-studio arch=${{ matrix.arch }}
-          cat logs/packer-docker-studio.log
-          docker --version
-          docker info
-          docker inspect cliffano/studio
-          make publish-docker-studio arch=${{ matrix.arch }}
   manifest:
     needs: build
     runs-on: ubuntu-24.04

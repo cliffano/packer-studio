@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Changed
+- Simplify CI and publish workflow condition now that Studio 4.0.0 is multi-arch
+
 ## 4.0.0 - 2026-10-04
 ### Added
 - Add arm64 Docker image alongside amd64, published as multi-arch image

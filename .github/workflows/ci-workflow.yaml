@@ -16,17 +16,6 @@ jobs:
         with:
           set-safe-directory: ${{ github.workspace }}
       - uses: cliffano/command-docker-action@v2.0.0
-        if: matrix.arch == 'amd64'
         with:
-          image: cliffano/studio:3.2.0
+          image: cliffano/studio:4.0.0
           command: 'make deps ci arch=${{ matrix.arch }}'
-      # cliffano/studio:3.2.0 is amd64 only and Packer crashes under emulation,
-      # so the arm64 build runs directly on the runner
-      # TODO: once image is bumped to a multi-arch cliffano/studio version, remove
-      #       the two arm64 steps below and the amd64 condition above
-      - uses: hashicorp/setup-packer@v3
-        if: matrix.arch == 'arm64'
-        with:
-          version: 1.16.0
-      - if: matrix.arch == 'arm64'
-        run: make deps ci arch=${{ matrix.arch }}

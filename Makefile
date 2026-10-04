@@ -1,4 +1,6 @@
 version ?= 3.8.1-pre.0
+# Target image architecture (amd64 or arm64), defaults to the host architecture
+arch ?= $(shell uname -m | sed -e 's/x86_64/amd64/' -e 's/aarch64/arm64/')
 
 ci: clean stage lint build-docker-studio
 
@@ -39,10 +41,18 @@ build-docker-studio:
 		PACKER_TMP_DIR=/tmp/packer-tmp/ \
 		packer build \
 		-var-file=conf/docker-studio.json \
+		-var arch=$(arch) \
 		templates/packer/docker-studio.pkr.hcl
 
 publish-docker-studio:
-	docker image push cliffano/studio:$(version)
-	docker image push cliffano/studio:latest
+	docker image push cliffano/studio:$(version)-$(arch)
 
-.PHONY: ci clean rmdeps deps deps-upgrade lint build-aws-studio build-docker-studio publish-docker-studio
+# Combine the per-architecture images into multi-arch version and latest tags
+publish-docker-studio-manifest:
+	docker buildx imagetools create \
+		--tag cliffano/studio:$(version) \
+		--tag cliffano/studio:latest \
+		cliffano/studio:$(version)-amd64 \
+		cliffano/studio:$(version)-arm64
+
+.PHONY: ci clean rmdeps deps deps-upgrade lint build-aws-studio build-docker-studio publish-docker-studio publish-docker-studio-manifest

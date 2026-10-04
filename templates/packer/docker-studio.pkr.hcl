@@ -16,13 +16,19 @@ variable "version" {
   default = "x.x.x"
 }
 
+variable "arch" {
+  type    = string
+  default = "amd64"
+}
+
 locals {
   env_path = "/root/.cargo/bin:/root/.local/bin:/root/go/bin:.venv/bin:/opt/poetry-venv/bin:/opt/poetry/bin:/usr/local/go/bin:/usr/local/maven/bin:/usr/local/node/bin:/usr/local/openjdk-jdk/bin:/var/homebrew/linked/cyclonedx-cli/bin/:/home/linuxbrew/.linuxbrew/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
 }
 
 source "docker" "studio" {
-  image  = "cliffano/base:1.1.0"
-  commit = true
+  image    = "cliffano/base:2.0.0"
+  platform = "linux/${var.arch}"
+  commit   = true
   run_command = [
     "-d",
     "-i",
@@ -159,7 +165,7 @@ build {
     repository = "cliffano/studio"
     tags        = [
       "latest",
-      var.version
+      "${var.version}-${var.arch}"
     ]
   }
 }

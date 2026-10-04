@@ -10,13 +10,13 @@
 
     - name: Download and extract Zig binaries
       ansible.builtin.unarchive:
-        src: https://ziglang.org/download/{{ zig_ver }}/zig-x86_64-linux-{{ zig_ver }}.tar.xz
+        src: https://ziglang.org/download/{{ zig_ver }}/zig-{{ ansible_architecture }}-linux-{{ zig_ver }}.tar.xz
         dest: /usr/local/
         remote_src: yes
         extra_opts: [--strip-components=0]
 
     - name: Create symbolic link for Zig
       ansible.builtin.file:
-        src: /usr/local/zig-x86_64-linux-{{ zig_ver }}/zig
+        src: /usr/local/zig-{{ ansible_architecture }}-linux-{{ zig_ver }}/zig
         dest: /usr/local/bin/zig
         state: link

@@ -16,7 +16,7 @@ This image is used to launch a container for developing code in Go, Java, JavaSc
 
 ## Installation
 
-Pull Studio Docker image from Docker Hub:
+Pull Studio Docker image from Docker Hub, the image is available for `linux/amd64` and `linux/arm64` architectures:
 
 ```shell
 docker pull cliffano/studio
@@ -28,6 +28,12 @@ Or alternatively, you can create the Docker image:
 git clone https://github.com/cliffano/packer-studio
 cd packer-studio
 make build-docker-studio
+```
+
+The image is built for the host architecture by default, the architecture can be specified explicitly using `arch` (`amd64` or `arm64`):
+
+```shell
+make build-docker-studio arch=arm64
 ```
 
 An image with `cliffano/studio` repository and `latest` tag should show up:

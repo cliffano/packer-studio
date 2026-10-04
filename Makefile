@@ -1,4 +1,4 @@
-version ?= 3.8.1-pre.0
+version ?= 4.0.0
 # Target image architecture (amd64 or arm64), defaults to the host architecture
 arch ?= $(shell uname -m | sed -e 's/x86_64/amd64/' -e 's/aarch64/arm64/')
 
